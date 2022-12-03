@@ -18,6 +18,9 @@ const {createWriteStream, promises, existsSync} = require('fs');
 const {join} = require('path');
 const {Readable} = require('stream');
 
+const Couleur = require("@mongodb-model/couleurs");
+const {Red,Green} = new Couleur
+
 class HTTPController extends require("./base") {
 
   constructor(...arrayOfObjects) {
@@ -40,7 +43,7 @@ class HTTPController extends require("./base") {
     this.setMaxListeners(Infinity);
   }
 
-  ctrlpath( path = '', base = './app/controllers/http') {
+  ctrlpath( path = '', base = './app/controllers/tcp') {
     return join(base, path)
   }
   ctrlpathname(command){
@@ -66,7 +69,7 @@ class HTTPController extends require("./base") {
   async makedir(command){
     if(this.direxists(command)){
         if(this.ctrlexists(command)){
-            return console.log(command.split('/').pop(), 'Controller Already Exits')
+           return console.log(Red(`${command.split('/').pop()} Controller already exits`));
         }else{
             try{
               await promises.mkdir(this.ctrldirpath(command), {recursive: true})
@@ -74,7 +77,6 @@ class HTTPController extends require("./base") {
               console.log('error', error)
             }
         }
-      
      }else{
         try{
            await promises.mkdir(this.ctrldirpath(command), {recursive: true})
@@ -90,12 +92,12 @@ class HTTPController extends require("./base") {
 
      if(this.direxists(command)){
         if(this.ctrlexists(command)){
-            return console.log(command.split('/').pop(), 'Controller Already Exits')
+           return console.log(Red(`${command.split('/').pop()} Controller already exits`));
         }else{
             await this.makedir(command);
             this.makeController(command, data);
             this.emit('makeController', command)
-            return console.log(command.split('/').pop(), 'Controller has been created');
+            return console.log(Green(`${command.split('/').pop()} Controller has been created`));
             // return console.log(`[\x1b[34m${command.split('/').pop()}, 'Controller has been created'\x1b[0m`)
         }
      }else{
@@ -104,7 +106,7 @@ class HTTPController extends require("./base") {
         this.makeController(command, data);
         this.emit('makeController', command)
         // return console.log(`[\x1b[34m${command.split('/').pop()}, 'Controller has been created'\x1b[0m`)
-        return console.log(command.split('/').pop(), 'Controller has been created');
+        return console.log(Green(`${command.split('/').pop()} Controller has been created`));
      }
 
   }
