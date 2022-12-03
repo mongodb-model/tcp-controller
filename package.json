@@ -1,6 +1,6 @@
 {
   "name": "@mongodb-model/tcp-controller",
-  "version": "0.0.0",
+  "version": "0.0.100",
   "description": "tcp controller",
   "main": "index.js",
   "bin": {
