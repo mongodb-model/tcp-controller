@@ -40,7 +40,7 @@ class HTTPController extends require("../base") {
     this.setMaxListeners(Infinity);
   }
 
-  ctrlpath( path = '', base = './app/controllers/http') {
+  ctrlpath( path = '', base = './app/controllers/tcp') {
     return join(base, path)
   }
   ctrlpathname(command){
