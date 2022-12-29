@@ -122,21 +122,18 @@
   resolved "https://registry.yarnpkg.com/@esbuild/win32-x64/-/win32-x64-0.16.12.tgz#31197bb509049b63c059c4808ac58e66fdff7479"
   integrity sha512-iPYKN78t3op2+erv2frW568j1q0RpqX6JOLZ7oPPaAV1VaF7dDstOrNw37PVOYoTWE11pV4A1XUitpdEFNIsPg==
 
-"@mongodb-model/controller@^0.0.0":
-  version "0.0.0"
-  resolved "https://registry.yarnpkg.com/@mongodb-model/controller/-/controller-0.0.0.tgz#87ac5b6395dc68adcbc5dc8368374b674cdf836d"
-  integrity sha512-2OTiYH0XGzGba7kBXlovvSZjy+u6REVdxbMcUk/Cihp15veaWHuHwRMbdJ043aoxUyz7fffkjmdPqvSGDVwq6w==
+"@mongodb-model/controller@^0.0.10":
+  version "0.0.10"
+  resolved "https://registry.yarnpkg.com/@mongodb-model/controller/-/controller-0.0.10.tgz#62ace96bfb00f635180b9f855ca29e9f10cc467d"
+  integrity sha512-v1zQZWLqXwll+GfMHV+vDnHtm01USN6jOJrubcLw46Muige4NmTE0iEb9Y55gsjxPY2+cNQ8AC1APPKs9z8NFg==
   dependencies:
     dotenv "16.0.3"
     vitest "0.25.1"
 
-"@mongodb-model/couleurs@^0.0.0":
-  version "0.0.0"
-  resolved "https://registry.yarnpkg.com/@mongodb-model/couleurs/-/couleurs-0.0.0.tgz#f47e031d812e68f12288ac2912315f13d68b88d0"
-  integrity sha512-/uLS1UDJo5VSIWSLLg6a372ChNMNUF1A4y5pcINOLr0G2PPRvGWlNNq1NQy315Iix4+lfovMuqbQVuUG1tq9jg==
-  dependencies:
-    dotenv "16.0.3"
-    vitest "0.25.1"
+"@mongodb-model/couleurs@^0.0.10":
+  version "0.0.10"
+  resolved "https://registry.yarnpkg.com/@mongodb-model/couleurs/-/couleurs-0.0.10.tgz#3d581f7aed3b5be077c2dbcd595fe7fbd634bef3"
+  integrity sha512-jMTmkz8UkvSgzrzZW7Xls0/IVcV9lpOVggeSMmcx0lHfFKHXc6gbq/kAFmQJt4D1xIDTuW6JaTY3vGKFadwyUw==
 
 "@types/chai-subset@^1.3.3":
   version "1.3.3"
